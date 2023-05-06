@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-loader {
+   width: 100px;
+   height: 100px;
+   display: grid;
+}
+.custom-loader::before,
+.custom-loader::after {    
+   content:"";
+   grid-area: 1/1;
+   --c: radial-gradient(farthest-side,#766DF4 92%,#0000);
+   background: 
+     var(--c) 50%  0, 
+     var(--c) 50%  100%, 
+     var(--c) 100% 50%, 
+     var(--c) 0    50%;
+   background-size: 24px 24px;
+   background-repeat: no-repeat;
+   animation: s2 0.5s infinite;
+}
+.custom-loader::before {
+ margin:8px;
+ filter:hue-rotate(45deg);
+ background-size: 16px 16px;
+ animation-timing-function: linear
+}
+
+@keyframes s2{ 
+ 100%{transform: rotate(.5turn)}
+}
+
+/* css background-image generated using https://10015.io/tools/css-background-pattern-generator */
+.background {
+  background-image: radial-gradient(#ffffff 2.5px, transparent 2.5px), radial-gradient(#ffffff 2.5px, transparent 2.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+  background-color: #b1d2ff;
+}
+
+
+/* css loader generated using https://10015.io/tools/css-loader-generator */
+.spinner {
+   margin: 40px;
+   width: 11.2px;
+   height: 11.2px;
+   animation: spinner-z355kx 1s infinite linear;
+   border-radius: 11.2px;
+   box-shadow: 28px 0px 0 0 #fff, 17.4px 21.8px 0 0 #fff, -6.2px 27.2px 0 0 #fff, -25.2px 12px 0 0 #fff, -25.2px -12px 0 0 #fff, -6.2px -27.2px 0 0 #fff, 17.4px -21.8px 0 0 #fff;
+}
+
+@keyframes spinner-z355kx {
+   to {
+      transform: rotate(360deg);
+   }
+}
